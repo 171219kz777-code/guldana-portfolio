@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Джуманова Гулдана</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaf7fc;
+            color: #29485a;
+        }
+
+        header {
+            background-color: #9edcf5;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background-color: #ffe48a;
+        }
+
+        nav a {
+            color: #29485a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3c94bd;
+        }
+
+        section {
+            background-color: white;
+            margin: 25px auto;
+            padding: 30px;
+            max-width: 900px;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #3c94bd;
+        }
+
+        .about {
+            display: flex;
+            gap: 30px;
+        }
+
+        .info {
+            background-color: #eaf7fc;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff3bd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #9edcf5;
+            color: #29485a;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #70c5e6;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #9edcf5;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Джуманова Гулдана</h1>
+    <p>Моя личная страница</p>
+</header>
+
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#about">Обо мне</a>
+    <a href="#interests">Интересы</a>
+    <a href="#contact">Контакты</a>
+</nav>
+
+<main>
+
+    <section id="home">
+        <h2>Добро пожаловать!</h2>
+
+        <p>
+            Привет! Меня зовут Гулдана.
+            Это моя небольшая страница-визитка.
+            Здесь я расскажу немного о себе,
+            своих интересах и целях.
+        </p>
+    </section>
+
+
+    <section id="about">
+        <h2>Обо мне</h2>
+
+        <div class="about">
+
+            <div class="info">
+                <p><strong>Имя:</strong> Джуманова Гулдана</p>
+
+                <p>
+                    <strong>Университет:</strong>
+                    Казахский национальный женский
+                    педагогический университет
+                </p>
+
+                <p>
+                    <strong>Специальность:</strong>
+                    Информационные системы
+                </p>
+
+                <p><strong>Курс:</strong> 3</p>
+            </div>
+
+            <div class="info">
+                <p>
+                    Я изучаю информационные технологии
+                    и постепенно развиваю свои навыки
+                    в программировании и создании сайтов.
+                </p>
+
+                <p>
+                    В будущем я хочу стать хорошим
+                    IT-специалистом и создавать
+                    полезные проекты.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="interests">
+        <h2>Мои интересы</h2>
+
+        <div class="interests">
+
+            <div class="card">
+                <h3>💻 Программирование</h3>
+                <p>
+                    Изучение программирования
+                    и создание веб-сайтов.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Творчество</h3>
+                <p>
+                    Мне нравится придумывать
+                    новые идеи и работать над дизайном.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Развитие</h3>
+                <p>
+                    Изучение новых технологий
+                    и получение новых навыков.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Связь со мной</h2>
+
+        <p>
+            Спасибо, что посетили мою страницу!
+        </p>
+
+        <button onclick="showMessage()">
+            Нажми на кнопку
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Джуманова Гулдана</p>
+    <p>Мой сайт-визитка</p>
+</footer>
+
+
+<script>
+
+    function showMessage() {
+        document.getElementById("message").innerHTML =
+            "Спасибо за посещение моего сайта!";
+    }
+
+</script>
+
+</body>
+</html>
+```
